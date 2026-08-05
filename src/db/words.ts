@@ -89,7 +89,7 @@ export const wordDB = {
   },
 
   async getSelectedWords(): Promise<Word[]> {
-    return await db.words.where('isSelected').equals(true).toArray();
+    return await db.words.where('isSelected').equals(1).toArray();
   },
 
   async getByArticleId(articleId: number): Promise<Word[]> {
