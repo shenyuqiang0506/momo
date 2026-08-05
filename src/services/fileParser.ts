@@ -72,7 +72,7 @@ export async function parseFile(file: File): Promise<ParseResult> {
   }
 }
 
-export async function parseText(text: string, title: string): Promise<ParseResult> {
+export async function parseText(text: string, _title: string): Promise<ParseResult> {
   const cleanedText = cleanText(text);
   const hash = await calculateHash(cleanedText);
 

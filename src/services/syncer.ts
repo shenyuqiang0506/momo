@@ -1,5 +1,5 @@
 import { maimemoAPI } from '../api/maimemo';
-import { wordDB, syncLogDB, articleDB } from '../db';
+import { wordDB, syncLogDB } from '../db';
 import { useAppStore } from '../stores/appStore';
 import type { Word } from '../types';
 
@@ -88,7 +88,7 @@ export async function fullSync(
         notepadContent += `${w.spelling}\n`;
       });
 
-      synonymGroups.forEach((words, groupId) => {
+      synonymGroups.forEach((words) => {
         const meaning = words[0].synonymMeaning || '同义替换';
         notepadContent += `\n# 同义替换: ${meaning}\n\n`;
         words.forEach(w => {

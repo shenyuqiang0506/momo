@@ -45,12 +45,11 @@ export default function Upload() {
     }
 
     try {
-      let result;
       if (pastedText.trim()) {
-        result = await analyzeText(pastedText.trim(), batchName);
+        await analyzeText(pastedText.trim(), batchName);
       } else {
         const files = fileList.map((item: any) => item.originFileObj);
-        result = await analyzeFiles(files, batchName);
+        await analyzeFiles(files, batchName);
       }
 
       message.success('分析完成！');

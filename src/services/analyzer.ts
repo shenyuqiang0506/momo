@@ -94,7 +94,7 @@ export async function analyzeFiles(
       const wordsToSave: Omit<Word, 'id'>[] = [];
 
       // Add high-frequency words
-      highFreqWords.forEach((word, index) => {
+      highFreqWords.forEach((word) => {
         wordsToSave.push({
           articleId,
           spelling: word.spelling.toLowerCase(),

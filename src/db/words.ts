@@ -83,7 +83,7 @@ export const wordDB = {
   }> {
     const total = await db.words.count();
     const allWords = await db.words.toArray();
-    const synced = allWords.filter(w => w.isSynced).length;
+    const synced = allWords.filter(w => w.isSynced === true).length;
     const pending = total - synced;
     return { total, synced, pending };
   },

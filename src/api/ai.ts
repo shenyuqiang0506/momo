@@ -14,8 +14,6 @@ export interface SynonymPair {
   interpretations: string[];
 }
 
-export type { HighFreqWord, SynonymPair };
-
 const MAX_CONTENT_LENGTH = 15000;
 
 function truncateContent(content: string): string {
