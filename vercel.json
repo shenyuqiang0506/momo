@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/maimemo/:path*",
+      "destination": "/api/maimemo/[...path]"
+    },
+    {
+      "source": "/api/ai/completions",
+      "destination": "/api/ai/completions"
+    }
+  ]
+}
