@@ -5,10 +5,7 @@ import { useAppStore } from '../stores/appStore';
 import type { Word } from '../types';
 
 // Mark parseText as used to avoid TypeScript warning
-const _ = parseText;
-
-// Mark parseText as used to avoid TypeScript warning
-const _ = parseText;
+const _parseTextUsed = parseText;
 
 export interface AnalysisResult {
   articleId: number;
